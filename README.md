@@ -14,7 +14,6 @@ CedarNexus Technologies builds AI agents and automation solutions for service bu
 - **React** - UI component library
 
 ## Features
-
 - ✅ Modern, professional B2B design
 - ✅ Fully responsive and mobile-friendly
 - ✅ SEO optimized
