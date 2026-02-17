@@ -1,122 +1,93 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+import CTASection from '@/components/CTASection'
+
+export const metadata: Metadata = {
+  title: 'What We Think',
+  description:
+    'Hard-won lessons on getting AI to production, building data platforms that hold up under scrutiny, and modernizing .NET stacks without multi-year rewrites.',
+  openGraph: { title: 'What We Think | CedarNexus' },
+}
+
+const articles = [
+  {
+    title: 'Why your AI pilot never made it to production',
+    summary: 'Most AI pilots die between demo and production. The causes are predictable: no eval suite, no monitoring, no data-quality baseline, and no owner with P&L accountability. We break down what the teams that ship have in common.',
+    tags: ['AI Workflow Automation', 'Guardrails'],
+  },
+  {
+    title: 'Agentic AI needs guardrails, not just prompts',
+    summary: 'Tool-calling agents can create CRM records, move money, and send emails. Without allowlists, schema validation, and confidence-gated escalation, one bad inference becomes a production incident. We detail the six controls that make agentic AI auditable.',
+    tags: ['AI Workflow Automation', 'Security'],
+  },
+  {
+    title: 'Fabric vs. Databricks: how to choose for mid-market',
+    summary: 'Both are capable platforms. The right choice depends on your existing Microsoft licensing, team SQL proficiency, and whether Power BI is a first-class requirement. A decision framework with real cost comparisons.',
+    tags: ['Data Foundations', 'Fabric'],
+  },
+  {
+    title: 'The hidden cost of skipping AI evals',
+    summary: 'Shipping an AI feature without an eval suite is like deploying code without tests. One client lost $180K in a week from a silent accuracy regression. We show how to build eval suites that scale and what they cost to maintain.',
+    tags: ['AI Evals', 'Observability'],
+  },
+  {
+    title: 'Modernization is an AI prerequisite',
+    summary: 'You can\'t add AI features to a monolith that deploys monthly and has zero observability. We show how containerization, CI/CD, and tracing pay for themselves in reliability gains within the first quarter — and unblock the AI roadmap as a side effect.',
+    tags: ['Modernization', 'Azure / .NET'],
+  },
+  {
+    title: 'What "AI-ready data" actually means',
+    summary: 'It\'s not a data lake. AI-ready data means governed schemas, freshness SLAs, access controls that work for both humans and machines, and a semantic layer that eliminates the "my numbers don\'t match" meeting. We define the standard and show what it costs to get there.',
+    tags: ['Data Foundations', 'Governance'],
+  },
+]
 
 export default function WhatWeThinkPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-50 to-white">
-        <div className="container-custom">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              What we think
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600">
-              Our point of view on AI, service businesses, and the future of customer operations.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Themes We Focus On */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12">Themes we focus on</h2>
-            
-            <div className="space-y-8">
-              <div className="p-6 border-l-4 border-primary-500 bg-gray-50">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">AI agents as teammates, not toys</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  We believe AI agents should be reliable, productive members of your team—not gimmicks or experiments. They should handle real work, integrate with your systems, and deliver measurable value from day one.
-                </p>
-              </div>
-
-              <div className="p-6 border-l-4 border-primary-500 bg-gray-50">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Service businesses deserve enterprise-grade tools</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  HVAC companies, dental practices, and local service providers shouldn't settle for consumer-grade software. They deserve the same sophisticated AI and automation capabilities that enterprise companies use—tailored to their unique needs.
-                </p>
-              </div>
-
-              <div className="p-6 border-l-4 border-primary-500 bg-gray-50">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Human + AI, not human vs AI</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  The goal isn't to replace your team—it's to amplify their capabilities. AI handles repetitive tasks so your people can focus on complex problems, build relationships, and deliver exceptional service. The best outcomes happen when humans and AI work together.
-                </p>
-              </div>
-
-              <div className="p-6 border-l-4 border-primary-500 bg-gray-50">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Measure what matters: appointments, lifetime value, not just clicks</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Vanity metrics like website traffic and social media likes don't pay the bills. We focus on metrics that drive real business growth: booked appointments, customer lifetime value, conversion rates, and revenue per customer. If it doesn't impact your bottom line, it doesn't matter.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Perspectives We're Working On */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12">Perspectives we're working on</h2>
-            
-            <div className="space-y-6">
-              <div className="p-8 bg-white border border-gray-200 rounded-lg">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                  The invisible revenue leak: missed calls in HVAC
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Every missed call is a potential customer choosing your competitor. We explore how HVAC businesses lose thousands in revenue each month from unanswered phones—and how AI receptionists solve this silent problem.
-                </p>
-              </div>
-
-              <div className="p-8 bg-white border border-gray-200 rounded-lg">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                  Fix your Google Business Profile before you buy more ads
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Spending money on ads while your Google Business Profile has old hours, no photos, and unanswered reviews is like pouring water into a leaky bucket. We discuss why operational excellence beats marketing spend—and how to optimize both.
-                </p>
-              </div>
-
-              <div className="p-8 bg-white border border-gray-200 rounded-lg">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                  What an AI receptionist can and cannot do
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  AI receptionists are powerful, but they're not magic. We break down realistic capabilities, limitations, and when you should route calls to humans—so you can set appropriate expectations and design effective workflows.
-                </p>
-              </div>
-
-              <div className="p-8 bg-white border border-gray-200 rounded-lg">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                  Why dental practices need reactivation campaigns, not just new patient ads
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Acquiring new patients costs 5-10x more than reactivating lapsed ones. We examine why most dental practices overspend on new patient acquisition while neglecting the goldmine of former patients who already know and trust them.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-primary-600">
-        <div className="container-custom text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Want to discuss these ideas?
-          </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            We're always happy to talk about AI, service businesses, and practical ways to grow. Reach out to share your perspective or explore how these ideas apply to your business.
+      {/* Hero */}
+      <section className="py-20 sm:py-28 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">What we think</h1>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            Hard-won lessons from shipping AI to production, building data platforms that hold up
+            under audit, and modernizing .NET stacks without multi-year rewrites. Written by the
+            engineers who do the work — not a marketing team.
           </p>
-          <Link href="/contact" className="inline-block px-8 py-4 bg-white text-primary-600 font-semibold rounded-md hover:bg-gray-50 transition-colors">
-            Start a conversation
-          </Link>
         </div>
       </section>
+
+      {/* Articles */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8">
+            {articles.map((article) => (
+              <article key={article.title} className="p-8 bg-gray-50 border border-gray-200 rounded-lg">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {article.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-semibold uppercase tracking-wider"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">{article.title}</h2>
+                <p className="text-gray-600 leading-relaxed">{article.summary}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <CTASection
+        headline="Have a project that needs a plan?"
+        body="A 10-day paid Blueprint gives you an architecture doc, risk register, costed backlog, and ROI model you own."
+        buttonText="Get a 10-day paid Blueprint"
+        href="/blueprint"
+      />
     </>
   )
 }
