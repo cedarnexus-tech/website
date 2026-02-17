@@ -75,7 +75,8 @@ export default function CareersPage() {
                 <p className="font-semibold text-gray-900 mb-2">We&rsquo;re looking for:</p>
                 <ul className="space-y-1.5 text-gray-600 text-sm">
                   <li>• Strong Python or TypeScript skills</li>
-                  <li>• Experience with LLM APIs, prompt engineering, or AI orchestration frameworks</li>
+                  <li>• Experience with LLM APIs, prompt engineering, or AI orchestration frameworks (Azure AI Foundry, Microsoft AI Agent Framework, Semantic Kernel, LangGraph, or similar)</li>
+                  <li>• Familiarity with Azure OpenAI, responsible-AI tooling, and model evaluation pipelines</li>
                   <li>• Comfort with ambiguity, direct client communication, and shipping to production</li>
                 </ul>
               </div>
