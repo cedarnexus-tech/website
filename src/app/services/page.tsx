@@ -5,8 +5,8 @@ import OfferCard from '@/components/OfferCard'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'AI workflow automation, RAG copilots, evals & observability, Azure/.NET modernization, and Fabric/Power BI data foundations — delivered with guardrails and production-grade quality.',
-  openGraph: { title: 'Services | CedarNexus', description: 'Five focused services for mid-market engineering teams.' },
+    'AI workflow automation, RAG copilots, evals & observability, Azure/.NET modernization, Fabric/Power BI data foundations, and cost takeout — delivered with guardrails and production-grade quality.',
+  openGraph: { title: 'Services | CedarNexus', description: 'Six focused services for mid-market engineering and finance teams.' },
 }
 
 const services = [
@@ -39,6 +39,12 @@ const services = [
     description: 'Eliminate "my numbers don\'t match" debates. One governed lakehouse, one semantic layer, automated quality checks — ready for AI and self-service BI.',
     href: '/services/fabric-powerbi-foundation',
     icon: <svg className="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" /></svg>,
+  },
+  {
+    title: 'Cost Takeout Blueprint',
+    description: 'Cut SaaS + ERP spend 15–30%. License audit, renegotiation playbooks, and a prioritized savings plan — delivered in 10–14 days.',
+    href: '/services/cost-takeout-blueprint',
+    icon: <svg className="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
   },
 ]
 

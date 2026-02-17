@@ -10,6 +10,7 @@ const serviceLinks = [
   { href: '/services/ai-evals-observability', label: 'AI Evals & Observability', desc: 'Know when your AI is wrong' },
   { href: '/services/modernization-sprint', label: 'Modernization Sprint', desc: 'Azure / .NET to production-grade' },
   { href: '/services/fabric-powerbi-foundation', label: 'Fabric & Power BI Foundation', desc: 'AI-ready data platform' },
+  { href: '/services/cost-takeout-blueprint', label: 'Cost Takeout Blueprint', desc: 'Cut SaaS + ERP spend 15–30%' },
 ]
 
 export default function Navbar() {

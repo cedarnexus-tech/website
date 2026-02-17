@@ -30,6 +30,7 @@ export default function Footer() {
               <li><Link href="/services/ai-evals-observability" className="hover:text-white transition-colors">AI Evals &amp; Observability</Link></li>
               <li><Link href="/services/modernization-sprint" className="hover:text-white transition-colors">Modernization Sprint</Link></li>
               <li><Link href="/services/fabric-powerbi-foundation" className="hover:text-white transition-colors">Fabric &amp; Power BI</Link></li>
+              <li><Link href="/services/cost-takeout-blueprint" className="hover:text-white transition-colors">Cost Takeout</Link></li>
             </ul>
           </div>
 
